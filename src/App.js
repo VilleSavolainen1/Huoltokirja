@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Main from './main'
-import Weather from './weather';
 import Workbench from './worktable';
 import Notes from './notes';
 import Info from './info';
@@ -22,9 +21,6 @@ const App = () => {
   const [password, setPassword] = useState('')
   const [notes, setNotes] = useState([])
   const [user, setUser] = useState(null)
-  const [temp, setTemp] = useState('');
-  const [wind, setWind] = useState('');
-  const [desc, setDesc] = useState('');
   const [jobs, setJobs] = useState();
   const [modify, setModify] = useState(false);
   const [index, setIndex] = useState(null)
@@ -118,10 +114,9 @@ const App = () => {
       loginForm() :
       <Router>
         <div>
-        <Navbar bg="dark" collapseOnSelect expand="lg" fixed="top">
+        <Navbar bg="dark" collapseOnSelect expand="sm" fixed="top">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-        <Weather temp={temp} setTemp={setTemp} wind={wind} setWind={setWind} desc={desc} setDesc={setDesc}/>
           <NavLink exact activeClassName="active" style={linkStyle} to="/">Etusivu</NavLink>
           <NavLink activeClassName="active" style={linkStyle} to="/info">Kohdetiedot</NavLink>
           <NavLink activeClassName="active" style={linkStyle} to="/worktable">Huoltokirja</NavLink>

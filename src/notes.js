@@ -9,7 +9,6 @@ import Deletebutton from './deletebutton'
 const Notes = ({notesToRender, addnote, setAddnote}) => {
 
     const [note, setNote] = useState('')
-    let target;
 
     const showInputs = () => {
         addnote ? setAddnote(false) : setAddnote(true)
@@ -32,7 +31,7 @@ const Notes = ({notesToRender, addnote, setAddnote}) => {
     return (
         <div style={noteStyle}>
             <div>
-                <Button variant="outline-light" onClick={showInputs}><img src={plus} style={imageStyle}></img></Button><br></br><br></br>
+                <Button variant="outline-light" onClick={showInputs}><img src={plus} style={imageStyle} alt="img"></img></Button><br></br><br></br>
                     { addnote ? 
                         <center>
                         <form onSubmit={handleSubmit}>
