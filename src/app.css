@@ -1,3 +1,18 @@
+body, html {
+    height: 100%;
+}
+
+
 .active {
-    color: white;
+    color:white;
+    outline: none;
+}
+
+.nav {
+    background-color: rgb(0, 0, 0, .85);
+    font-family: Borda,"PingFang SC","Microsoft YaHei",Simsun,Helvetica,Arial,Verdana,sans-serif;
+}
+
+.main {
+    background-color: rgb(0, 0, 0, .70)
 }

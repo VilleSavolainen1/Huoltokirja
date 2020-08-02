@@ -104,17 +104,17 @@ const App = () => {
       <Button variant="outline-light" type="submit"><img src={arrow} style={imageStyle} alt="img"/></Button>
     </form>
     <p style={errorStyle}>{error}</p>
-    </center>      
+    </center>    
   )
 
 
   return (
-    <div className="container">
+      <div className="container">
       {user === null ?
       loginForm() :
       <Router>
         <div>
-        <Navbar bg="dark" collapseOnSelect expand="sm" fixed="top">
+        <Navbar collapseOnSelect expand="sm" fixed="top" className="nav">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <NavLink exact activeClassName="active" style={linkStyle} to="/">Etusivu</NavLink>
@@ -143,16 +143,15 @@ const App = () => {
         </Switch>
       </Router>
       }
-    </div>
+      </div>
   );
 }
 
 const linkStyle = {
   textDecoration: 'none',
-  fontSize: 24,
+  fontSize: 20,
   padding: 12,
-  fontFamily: 'Verdana',
-  letterSpacing: 3
+  letterSpacing: 5,
 }
 
 const imageStyle = {
