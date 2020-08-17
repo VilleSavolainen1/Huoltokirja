@@ -1,22 +1,20 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const noteSchema = new mongoose.Schema({
-    id: Number,
-    työ: String,
-    pvm: String,
-    lisätietoja: String
-  })
-  
-  
-  noteSchema.set('toJSON', {
-    transform: (document, returnedObject) => {
-      returnedObject.id = returnedObject._id.toString()
-      delete returnedObject._id
-      delete returnedObject.__v
-    }
-  })
+  id: Number,
+  työ: String,
+  pvm: String,
+  lisätietoja: String,
+});
 
-  
-  const Huolto = mongoose.model('Huolto', noteSchema)
+noteSchema.set("toJSON", {
+  transform: (document, returnedObject) => {
+    returnedObject.id = returnedObject._id.toString();
+    delete returnedObject._id;
+    delete returnedObject.__v;
+  },
+});
 
-  module.exports = Huolto
+const Huolto = mongoose.model("Huolto", noteSchema);
+
+module.exports = Huolto;
