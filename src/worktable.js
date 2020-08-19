@@ -21,12 +21,12 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
   ];
 
   return (
-    <div>
+    <div style={workStyle}>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
-      <Table striped bordered hover>
+      <Table responsive striped bordered hover size="sm">
         <thead>
           <tr>
             <th>Työnimike</th>
@@ -391,5 +391,9 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
     </div>
   );
 };
+
+const workStyle = {
+  paddingTop: 60
+}
 
 export default Workbench;

@@ -128,10 +128,10 @@ const App = () => {
                 <NavLink activeClassName="active" style={linkStyle} to="/notes">
                   Muistiinpanot
                 </NavLink>
+                </Navbar.Collapse>
                 <Navbar className="ml-auto">
                   <Logout user={user} setUser={setUser} />
                 </Navbar>
-              </Navbar.Collapse>
             </Navbar>
           </div>
           <Switch>
@@ -165,9 +165,8 @@ const App = () => {
 
 const linkStyle = {
   textDecoration: "none",
-  fontSize: 20,
-  padding: 12,
-  letterSpacing: 5,
+  fontSize: 18,
+  paddingRight: 8
 };
 
 const imageStyle = {

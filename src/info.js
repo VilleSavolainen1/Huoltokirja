@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 
 const Info = () => {
   return (
-    <div>
+    <div style={infoStyle}>
       <br></br>
       <br></br>
       <br></br>
@@ -92,5 +92,9 @@ const Info = () => {
     </div>
   );
 };
+
+const infoStyle = {
+  paddingTop: 60
+}
 
 export default Info;

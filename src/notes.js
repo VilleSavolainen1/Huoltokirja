@@ -39,6 +39,8 @@ const Notes = ({ notesToRender, addnote, setAddnote }) => {
         </Button>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         {addnote ? (
           <center>
             <form onSubmit={handleSubmit}>
@@ -60,7 +62,7 @@ const Notes = ({ notesToRender, addnote, setAddnote }) => {
 };
 
 const noteStyle = {
-  paddingTop: 100,
+  paddingTop: 200,
   fontSize: 18,
 };
 
