@@ -28,18 +28,31 @@ const App = () => {
   const [index, setIndex] = useState(null);
   const [error, setError] = useState("");
   const [addnote, setAddnote] = useState(false);
+  const [jobisupdated, setJobIsUpdated] = useState(false);
+  const [notesupdated, setNotesUpdated] = useState(false);
+
+
 
   useEffect(() => {
     axios.get("/api/jobs").then((res) => {
       setJobs(res.data.map((job) => job));
     });
-  }, [jobs]);
+  }, [jobisupdated]);
+
+  useEffect(() => {
+    setJobIsUpdated(false)
+  }, [jobs])
+
+  useEffect(() => {
+    setNotesUpdated(false)
+  }, [notes])
 
   useEffect(() => {
     axios.get("/api/notes").then((res) => {
       setNotes(res.data);
     });
-  }, [notes]);
+  }, [notesupdated]);
+
 
   if (notes) {
     notesToRender = notes;
@@ -142,6 +155,7 @@ const App = () => {
                 setModify={setModify}
                 index={index}
                 setIndex={setIndex}
+                setJobIsUpdated={setJobIsUpdated}
               />
             </Route>
             <Route path="/notes">
@@ -151,6 +165,7 @@ const App = () => {
                 setNotes={setNotes}
                 addnote={addnote}
                 setAddnote={setAddnote}
+                setNotesUpdated={setNotesUpdated}
               />
             </Route>
             <Route path="/">

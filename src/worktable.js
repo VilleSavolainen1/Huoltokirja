@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import Update from "./update_button";
 import Jobupdate from "./job_update";
 
-const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
+const Workbench = ({ jobsToRender, modify, setModify, index, setIndex, setJobIsUpdated }) => {
   const id = [
     "5efde504a25c8b1b20deb8e9",
     "5efde58d6a49da22e8cb6576",
@@ -58,6 +58,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -85,6 +86,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -112,6 +114,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -139,6 +142,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -166,6 +170,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -193,6 +198,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -220,6 +226,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -247,6 +254,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -274,6 +282,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -301,6 +310,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -328,6 +338,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -355,6 +366,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>
@@ -382,6 +394,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex }) => {
                   setModify={setModify}
                   index={index}
                   setIndex={setIndex}
+                  setJobIsUpdated={setJobIsUpdated}
                 />
               ) : null}
             </td>

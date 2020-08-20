@@ -4,7 +4,7 @@ import plus from "./images/plus.png";
 import axios from "axios";
 import Deletebutton from "./deletebutton";
 
-const Notes = ({ notesToRender, addnote, setAddnote }) => {
+const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDeleted }) => {
   const [note, setNote] = useState("");
 
   const showInputs = () => {
@@ -20,13 +20,14 @@ const Notes = ({ notesToRender, addnote, setAddnote }) => {
     const changed = { note: note };
     axios.post("/api/notes", changed).then((notes) => console.log("updated"));
     setAddnote(false);
+    setNotesUpdated(true)
   };
 
   const list = notesToRender.map((notes) => {
     return (
       <ul key={notes.id}>
         <p>
-          {notes.note} <Deletebutton target={notes.id} />
+          {notes.note} <Deletebutton target={notes.id} setNotesUpdated={setNotesUpdated} />
         </p>
       </ul>
     );

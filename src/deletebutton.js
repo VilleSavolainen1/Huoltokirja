@@ -3,11 +3,11 @@ import { Button } from "react-bootstrap";
 import axios from "axios";
 import trash from "./images/trash.png";
 
-const Deletebutton = ({ target }) => {
+const Deletebutton = ({ target, setNotesUpdated }) => {
   const handleClick = () => {
     axios
       .delete(`/api/notes/${target}`)
-      .then((notes) => console.log("deleted"));
+      setNotesUpdated(true)
   };
 
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Jobupdate = ({ jobsToRender, id, modify, setModify }) => {
+const Jobupdate = ({ jobsToRender, id, modify, setModify, setJobIsUpdated }) => {
   const [day, setDay] = useState(jobsToRender.pvm);
   const [info, setInfo] = useState(jobsToRender.lisätietoja);
 
@@ -17,10 +17,12 @@ const Jobupdate = ({ jobsToRender, id, modify, setModify }) => {
     const changed = { pvm: day, lisätietoja: info };
     axios
       .put(`/api/jobs/${id}`, changed)
-      .then((notes) => console.log("updated"));
     e.preventDefault();
     setModify(false);
+    setJobIsUpdated(true)
   };
+
+
 
   return (
     <div>
