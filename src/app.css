@@ -17,3 +17,32 @@ body, html {
     background-color: rgb(0, 0, 0, .70)
 }
 
+.loginform {
+    margin-top: 180px;
+    height: 300px;
+    width: 320px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px #888;
+}
+
+.form-self {
+    margin-top: 30%;
+}
+
+.forminput {
+    height: 40px;
+    font-size: 15px;
+}
+
+
+.formsubmit {
+    margin-top: 10px;
+    border: 0px;
+    transition: all 0.5s;
+}
+
+.formsubmit:hover {
+    transform: scale(1.4);
+    background-color: white;
+}

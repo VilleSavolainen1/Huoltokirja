@@ -91,30 +91,30 @@ const App = () => {
 
   const loginForm = () => (
     <center>
-      <form onSubmit={handleLogin} style={formStyle}>
-        <div className="container">
-          <input
+      <div className="loginform">
+        <div className="form-self">
+      <form onSubmit={handleLogin}>
+          <input className="forminput"
             type="text"
             value={username}
             name="Username"
             placeholder="Käyttäjänimi"
             onChange={({ target }) => setUsername(target.value)}
           />
-        </div>
-        <div className="container">
-          <input
+          <input className="forminput"
             type="password"
             value={password}
             name="Password"
             placeholder="Salasana"
             onChange={({ target }) => setPassword(target.value)}
-          />
-        </div>
-        <Button variant="outline-light" type="submit">
+          /><br></br>
+        <Button variant="outline-light" type="submit" className="formsubmit">
           <img src={arrow} style={imageStyle} alt="img" />
         </Button>
       </form>
       <p style={errorStyle}>{error}</p>
+      </div>
+      </div>
     </center>
   );
 
@@ -193,9 +193,7 @@ const errorStyle = {
   color: "red",
 };
 
-const formStyle = {
-  marginTop: 180,
-};
+
 
 
 export default App;
