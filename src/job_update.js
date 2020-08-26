@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Jobupdate = ({ jobsToRender, id, modify, setModify, setJobIsUpdated }) => {
-  const [day, setDay] = useState(jobsToRender.pvm);
+
+  const getDate = () => {
+    let day = JSON.stringify(new Date()).slice(1, 11).split("-").reverse();
+    return (`${day[0]}.${day[1]}.${day[2]}`)
+
+  }
+
+  const [day, setDay] = useState(getDate());
   const [info, setInfo] = useState(jobsToRender.lisätietoja);
 
+  
   const handlePvm = (e) => {
+    console.log(e.target.value)
     setDay(e.target.value);
   };
 
@@ -32,7 +41,7 @@ const Jobupdate = ({ jobsToRender, id, modify, setModify, setJobIsUpdated }) => 
             Pvm:
             <input
               type="text"
-              placeholder={jobsToRender.pvm}
+              placeholder={getDate()}
               onChange={handlePvm}
             ></input>
           </label>
