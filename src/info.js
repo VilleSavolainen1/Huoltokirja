@@ -8,10 +8,14 @@ const Info = () => {
       <br></br>
       <br></br>
       <br></br>
-      <h3>Tuhkatie 8, Vahto</h3>
+      <h3>Kohdetiedot</h3>
       <br></br>
       <Table bordered>
         <tbody>
+          <tr>
+            <td>Osoite</td>
+            <td>Tuhkatie 8, 21310 Vahto</td>
+          </tr>
           <tr>
             <td>Kuntotarkastus suoritettu</td>
             <td>

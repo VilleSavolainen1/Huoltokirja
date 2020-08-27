@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Button} from 'react-bootstrap';
 import axios from "axios";
 
 const Jobupdate = ({
@@ -53,7 +54,7 @@ const Jobupdate = ({
               onChange={handleInfo}
             ></input>
           </label>
-          <input type="submit" value="Tallenna"></input>
+          <Button type="submit">Tallenna</Button>
         </form>
       ) : null}
     </div>

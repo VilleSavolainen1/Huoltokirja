@@ -10,7 +10,7 @@ const Logout = ({ user, setUser }) => {
   };
   return (
     <div className="container">
-      <Button variant="dark" onClick={exit}>
+      <Button variant="link" onClick={exit}>
         <img src={exitbutton} style={imageStyle} alt="img"></img>
       </Button>
     </div>

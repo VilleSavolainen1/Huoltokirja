@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 import loginService from "./services/login";
 import Logout from "./logout";
-import "./app.css";
+import "./style/app.css";
 
 const App = () => {
   let jobsToRender;
@@ -128,17 +128,18 @@ const App = () => {
             <Navbar collapseOnSelect expand="sm" fixed="top" className="nav">
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
-                <NavLink activeClassName="active" style={linkStyle} to="/info">
+                <NavLink activeClassName="active" className="link" style={linkStyle} to="/info">
                   Kohdetiedot
                 </NavLink>
                 <NavLink
                   activeClassName="active"
+                  className="link"
                   style={linkStyle}
                   to="/worktable"
                 >
                   Huoltokirja
                 </NavLink>
-                <NavLink activeClassName="active" style={linkStyle} to="/notes">
+                <NavLink activeClassName="active" className="link" style={linkStyle} to="/notes">
                   Muistiinpanot
                 </NavLink>
                 </Navbar.Collapse>

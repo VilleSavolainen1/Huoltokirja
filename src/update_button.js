@@ -2,9 +2,9 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import pencil from "./images/pencil.png";
 
-const Update = ({ id, setModify, setIndex }) => {
+const Update = ({ id, modify, setModify, setIndex }) => {
   const setVisibility = () => {
-    setModify(true);
+    !modify ? setModify(true) : setModify(false);
     setIndex(id);
   };
 

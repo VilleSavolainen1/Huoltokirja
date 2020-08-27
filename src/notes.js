@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import plus from "./images/plus.png";
 import axios from "axios";
 import Deletebutton from "./deletebutton";
+import './style/note.css';
 
 const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDeleted }) => {
   const [note, setNote] = useState("");
@@ -26,36 +27,37 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
   const list = notesToRender.map((notes) => {
     return (
       <ul key={notes.id}>
-        <p>
+        <div className="note">
+          <div className="text">
           {notes.note} <Deletebutton target={notes.id} setNotesUpdated={setNotesUpdated} />
-        </p>
+          </div>
+        </div>
       </ul>
     );
   });
   return (
     <div style={noteStyle}>
+      <h3>Muistiinpanot</h3>
+      <br></br>
       <div>
         <Button variant="outline-light" onClick={showInputs}>
-          <img src={plus} style={imageStyle} alt="img"></img>
+          <img className="plus" src={plus} style={imageStyle} alt="img"></img>
         </Button>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
         {addnote ? (
-          <center>
             <form onSubmit={handleSubmit}>
-              <textarea
+              <textarea className="noteform"
                 type="text"
                 placeholder="Uusi muistiinpano..."
                 onChange={handleInput}
                 rows="4"
-                cols="50"
+                cols="30"
               ></textarea>
-              <input type="submit" value="Tallenna"></input>
+              <Button type="submit">Tallenna</Button>
             </form>
-          </center>
         ) : null}
+        <br></br>
         {list}
       </div>
     </div>
@@ -63,7 +65,7 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
 };
 
 const noteStyle = {
-  paddingTop: 200,
+  paddingTop: 150,
   fontSize: 18,
 };
 

@@ -26,7 +26,9 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex, setJobIsU
       <br></br>
       <br></br>
       <br></br>
-      <Table responsive striped bordered hover size="sm">
+      <h3>Huoltokirja</h3>
+      <br></br>
+      <Table responsive="sm" striped bordered hover size="sm">
         <thead>
           <tr>
             <th>Työnimike</th>
