@@ -40,13 +40,14 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
       <h3>Muistiinpanot</h3>
       <br></br>
       <div>
-        <Button variant="outline-light" onClick={showInputs}>
-          <img className="plus" src={plus} style={imageStyle} alt="img"></img>
+        <Button className="plus" variant="link" onClick={showInputs}>
+          <img src={plus} style={imageStyle} alt="img"></img>
         </Button>
         <br></br>
         <br></br>
         {addnote ? (
             <form onSubmit={handleSubmit}>
+              <div className="savenote">
               <textarea className="noteform"
                 type="text"
                 placeholder="Uusi muistiinpano..."
@@ -54,7 +55,8 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
                 rows="4"
                 cols="30"
               ></textarea>
-              <Button type="submit">Tallenna</Button>
+              <Button id="save" type="submit">Tallenna</Button>
+              </div>
             </form>
         ) : null}
         <br></br>

@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import Update from "./update_button";
 import Jobupdate from "./job_update";
+import './style/app.css';
 
 const Workbench = ({ jobsToRender, modify, setModify, index, setIndex, setJobIsUpdated }) => {
   const id = [
@@ -21,7 +22,7 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex, setJobIsU
   ];
 
   return (
-    <div style={workStyle}>
+    <div className="jobtable">
       <br></br>
       <br></br>
       <br></br>
@@ -407,8 +408,5 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex, setJobIsU
   );
 };
 
-const workStyle = {
-  paddingTop: 60
-}
 
 export default Workbench;

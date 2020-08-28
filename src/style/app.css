@@ -14,7 +14,7 @@ body, html {
 
 
 .nav {
-    background-color: #6ab349;
+    background-color: #59a039;
     border-bottom: 1px solid #3f682c;
     font-family: Borda,"PingFang SC","Microsoft YaHei",Simsun,Helvetica,Arial,Verdana,sans-serif;
 }
@@ -51,4 +51,50 @@ body, html {
 .formsubmit:hover {
     transform: scale(1.4);
     background-color: white;
+}
+
+#exit {
+    transition: all 0.2s;
+}
+
+#exit:hover {
+    transform: scale(1.5);
+}
+
+#pencil {
+    transition: all 0.2s;
+    outline: none !important;
+    box-shadow: none;
+}
+
+#pencil:hover {
+    transform: scale(1.5);
+}
+
+#update {
+    margin: 5px;
+}
+
+#updateform {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.jobtable {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 750px) {
+    .jobtable {
+    width: 400px;
+    padding-top: 65px;
+    font-size: 12px;
+    }
+    .info {
+        font-size: 14px;
+        padding-top: 70px;
+    }
 }

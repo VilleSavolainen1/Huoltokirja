@@ -1,7 +1,7 @@
 .note {
     border: 1px solid black;
-    background-color: rgb(255, 255, 126);
-    width: 600px;
+    background-color: rgb(255, 255, 161);
+    width: 500px;
     box-shadow: 3px 3px rgb(172, 172, 172);
     border-radius: 3px;
 }
@@ -11,15 +11,41 @@
 }
 
 .plus {
-    transition: 0.5s;
+    transition: all 0.2s;
+    outline: none;
+    box-shadow: none;
 }
 
 .plus:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
+}
+
+#trash {
+    transition: all 0.2s;
+    margin-bottom: 8px;
+}
+
+#trash:hover {
+    transform: scale(1.8);
+}
+
+.savenote {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#save {
+    margin: 5px;
+    width: 120px;
 }
 
 @media (max-width: 700px) {
+    .savenote {
+        width: 300px;
+    }
     .note {
         width: 300px;
+        font-size: 15px;
     }
 }

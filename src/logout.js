@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import exitbutton from "./images/exit.png";
+import './style/app.css';
 
 const Logout = ({ user, setUser }) => {
   const exit = () => {
@@ -10,7 +11,7 @@ const Logout = ({ user, setUser }) => {
   };
   return (
     <div className="container">
-      <Button variant="link" onClick={exit}>
+      <Button id="exit" variant="link" onClick={exit}>
         <img src={exitbutton} style={imageStyle} alt="img"></img>
       </Button>
     </div>

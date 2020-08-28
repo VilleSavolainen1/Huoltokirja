@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Button} from 'react-bootstrap';
 import axios from "axios";
+import './style/app.css';
 
 const Jobupdate = ({
   jobsToRender,
@@ -38,23 +39,19 @@ const Jobupdate = ({
     <div>
       {modify ? (
         <form onSubmit={handleSubmit}>
-          <label>
-            Pvm:
+          <div id="updateform">
             <input
               type="text"
               placeholder={getDate()}
               onChange={handlePvm}
             ></input>
-          </label>
-          <label>
-            Lisätietoja:
             <input
               type="text"
-              placeholder={jobsToRender.lisätietoja}
+              placeholder="Lisätietoja"
               onChange={handleInfo}
             ></input>
-          </label>
-          <Button type="submit">Tallenna</Button>
+          <Button id="update" type="submit">Tallenna</Button>
+          </div>
         </form>
       ) : null}
     </div>

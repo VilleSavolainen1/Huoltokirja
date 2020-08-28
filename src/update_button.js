@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import pencil from "./images/pencil.png";
+import './style/app.css';
 
 const Update = ({ id, modify, setModify, setIndex }) => {
   const setVisibility = () => {
@@ -9,8 +10,8 @@ const Update = ({ id, modify, setModify, setIndex }) => {
   };
 
   return (
-    <div className="container">
-      <Button variant="outline-light" onClick={setVisibility}>
+    <div>
+      <Button id="pencil" variant="link" onClick={setVisibility}>
         <img src={pencil} style={imageStyle} alt="img" />
       </Button>
     </div>

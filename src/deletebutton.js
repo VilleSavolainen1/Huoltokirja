@@ -11,7 +11,7 @@ const Deletebutton = ({ target, setNotesUpdated }) => {
   };
 
   return (
-    <Button variant="outline-light" onClick={handleClick}>
+    <Button id="trash" variant="link" onClick={handleClick}>
       <img src={trash} style={imageStyle} alt="img" />
     </Button>
   );
