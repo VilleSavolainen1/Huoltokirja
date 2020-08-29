@@ -6,9 +6,9 @@ import './style/app.css';
 const Logout = ({ user, setUser }) => {
   const exit = () => {
     window.localStorage.clear();
-    console.log("loggedout");
     setUser(null);
   };
+  
   return (
     <div className="container">
       <Button id="exit" variant="link" onClick={exit}>
