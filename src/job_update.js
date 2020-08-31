@@ -50,7 +50,7 @@ const Jobupdate = ({
               placeholder="Lisätietoja"
               onChange={handleInfo}
             ></input>
-          <Button id="update" type="submit">Tallenna</Button>
+          <Button variant="success" id="update" type="submit">Tallenna</Button>
           </div>
         </form>
       ) : null}

@@ -38,6 +38,7 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
   return (
     <div style={noteStyle}>
       <h3>Muistiinpanot</h3>
+      <hr></hr>
       <br></br>
       <div>
         <Button className="plus" variant="link" onClick={showInputs}>
@@ -55,7 +56,7 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
                 rows="4"
                 cols="30"
               ></textarea>
-              <Button id="save" type="submit">Tallenna</Button>
+              <Button variant="success" id="save" type="submit">Tallenna</Button>
               </div>
             </form>
         ) : null}
@@ -67,7 +68,7 @@ const Notes = ({ notesToRender, addnote, setAddnote, setNotesUpdated, setNoteDel
 };
 
 const noteStyle = {
-  paddingTop: 150,
+  paddingTop: 140,
   fontSize: 18,
 };
 

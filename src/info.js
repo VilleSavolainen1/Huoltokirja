@@ -10,8 +10,9 @@ const Info = () => {
       <br></br>
       <br></br>
       <h3>Kohdetiedot</h3>
+      <hr></hr>
       <br></br>
-      <Table bordered>
+      <Table id="table" bordered>
         <tbody>
           <tr>
             <td>Osoite:</td>

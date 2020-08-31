@@ -1,6 +1,8 @@
 body, html {
     height: 100%;
+    background-color: #f6fcff;
 }
+
 
 
 .active {
@@ -12,16 +14,24 @@ body, html {
     color: white;
 }
 
+.link:hover {
+    color: #b3f193
+}
+
+
+#table {
+    background-color: white;
+}
+
 
 .nav {
-    background-color: #59a039;
-    border-bottom: 1px solid #3f682c;
+    background-color: #369e3b;
+    border-bottom: 4px solid #b3f193;
     font-family: Borda,"PingFang SC","Microsoft YaHei",Simsun,Helvetica,Arial,Verdana,sans-serif;
 }
 
-.main {
-    background-color: rgb(0, 0, 0, .70)
-}
+
+
 
 .loginform {
     margin-top: 120px;
@@ -30,10 +40,12 @@ body, html {
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 4px 4px rgb(75, 75, 75);
+    background-color: white;
 }
 
 .form-self {
     margin-top: 30%;
+    background-color: white;
 }
 
 .forminput {
@@ -58,7 +70,7 @@ body, html {
 }
 
 #exit:hover {
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 
 #pencil {
@@ -85,6 +97,10 @@ body, html {
 
 .jobtable {
     margin-bottom: 50px;
+}
+
+#row {
+    background-color: rgb(240, 240, 240);
 }
 
 @media (max-width: 750px) {

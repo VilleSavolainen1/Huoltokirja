@@ -28,13 +28,15 @@ const Workbench = ({ jobsToRender, modify, setModify, index, setIndex, setJobIsU
       <br></br>
       <br></br>
       <h3>Huoltokirja</h3>
+      <hr></hr>
       <br></br>
-      <Table responsive="sm" striped bordered hover size="sm">
+      <Table  id="table" responsive="sm" bordered hover size="sm">
         <thead>
-          <tr>
+          <tr id="row">
             <th>Työnimike</th>
             <th>Päivämäärä</th>
             <th>Lisätietoja</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
