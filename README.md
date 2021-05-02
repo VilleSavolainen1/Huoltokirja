@@ -1,6 +1,6 @@
 ## Huoltokirja
 
-Just to make life easier
+House maintenance app. My personal project for learning fullstack development.
 
 
 ## Setup
